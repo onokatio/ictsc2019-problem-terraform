@@ -62,10 +62,10 @@ resource "n0stack_virtualmachine" "vitualmachine" {
         annotations = {
                 "n0core/provisioning/virtual_machine/request_node_name" = "n0node00"
         }
-        request_cpu_milli_core = 10
-        limit_cpu_milli_core = 1000
-        request_memory_bytes = 536870912
-        limit_memory_bytes = 536870912
+        request_cpu_milli_core = 1000
+        limit_cpu_milli_core = 2000
+        request_memory_bytes = 2147483648
+        limit_memory_bytes = 2147483648
         block_storage_names = [var.machines[count.index].vm_name]
 
         nics {
