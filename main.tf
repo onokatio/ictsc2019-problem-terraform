@@ -1,5 +1,5 @@
 provider "n0stack" {
-	endpoint = "172.16.14.10:20180"
+	endpoint = "172.16.1.11:20180"
 }
 
 resource "n0stack_network" "f35" {
@@ -50,7 +50,7 @@ resource "n0stack_blockstorage" "blockstorage" {
 	tag = "latest"
 	blockstorage_name = var.machines[count.index].vm_name
 	annotations = {
-		"n0core/provisioning/block_storage/request_node_name" = "n0node00"
+		"n0core/provisioning/block_storage/request_node_name" = "ictsc-sl2500-1-3"
 	}
 	request_bytes = 1073741824
 	limit_bytes = 10737418240
@@ -60,12 +60,12 @@ resource "n0stack_virtualmachine" "vitualmachine" {
 	count = length(var.machines)
 	name = var.machines[count.index].vm_name
         annotations = {
-                "n0core/provisioning/virtual_machine/request_node_name" = "n0node00"
+                "n0core/provisioning/virtual_machine/request_node_name" = "ictsc-sl2500-1-3"
         }
-        request_cpu_milli_core = 1000
-        limit_cpu_milli_core = 2000
-        request_memory_bytes = 2147483648
-        limit_memory_bytes = 2147483648
+        request_cpu_milli_core = 3000
+        limit_cpu_milli_core = 3000
+        request_memory_bytes = 4294967296
+        limit_memory_bytes = 4294967296
         block_storage_names = [var.machines[count.index].vm_name]
 
         nics {
