@@ -1,0 +1,7 @@
+DeleteVirtualMachine-f35-lb:
+    type: VirtualMachine
+    action: DeleteVirtualMachine
+    args:
+        name: f35-lb
+    depends_on: []
+    ignore_error: false

@@ -1,0 +1,7 @@
+DeleteVirtualMachine-f35-worker-1:
+    type: VirtualMachine
+    action: DeleteVirtualMachine
+    args:
+        name: f35-worker-1
+    depends_on: []
+    ignore_error: false

@@ -1,0 +1,7 @@
+DeleteVirtualMachine-f35-manager-2:
+    type: VirtualMachine
+    action: DeleteVirtualMachine
+    args:
+        name: f35-manager-2
+    depends_on: []
+    ignore_error: false

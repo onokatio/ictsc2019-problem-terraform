@@ -6,7 +6,7 @@ resource "n0stack_network" "f35" {
 	name = "f35"
 	ipv4_cidr = "192.168.7.0/24"
 	annotations = {
-		"n0core/provisioning/virtual_machine/vlan_id" = "125"
+		"n0core/provisioning/virtual_machine/vlan_id" = "25"
 	}
 }
 
@@ -46,11 +46,11 @@ variable "machines" {
 resource "n0stack_blockstorage" "blockstorage" {
 	count = length(var.machines)
 
-	image_name = "baseimage-ubuntu"
+	image_name = "problem-7-${var.machines[count.index].vm_name}"
 	tag = "latest"
 	blockstorage_name = var.machines[count.index].vm_name
 	annotations = {
-		"n0core/provisioning/block_storage/request_node_name" = "ictsc-sl2500-1-3"
+		"n0core/provisioning/block_storage/request_node_name" = "ictsc-sl2500-1-1"
 	}
 	request_bytes = 1073741824
 	limit_bytes = 10737418240
@@ -60,7 +60,7 @@ resource "n0stack_virtualmachine" "vitualmachine" {
 	count = length(var.machines)
 	name = var.machines[count.index].vm_name
         annotations = {
-                "n0core/provisioning/virtual_machine/request_node_name" = "ictsc-sl2500-1-3"
+                "n0core/provisioning/virtual_machine/request_node_name" = "ictsc-sl2500-1-1"
         }
         request_cpu_milli_core = 3000
         limit_cpu_milli_core = 3000

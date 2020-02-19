@@ -1,0 +1,7 @@
+DeleteNetwork-f35:
+    type: Network
+    action: DeleteNetwork
+    args:
+        name: f35
+    depends_on: []
+    ignore_error: false

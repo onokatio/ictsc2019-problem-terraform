@@ -1,0 +1,7 @@
+DeleteBlockStorage-f35-worker-3:
+    type: BlockStorage
+    action: DeleteBlockStorage
+    args:
+        name: f35-worker-3
+    depends_on: []
+    ignore_error: false

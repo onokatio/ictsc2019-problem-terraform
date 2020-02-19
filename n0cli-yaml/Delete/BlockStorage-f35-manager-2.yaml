@@ -1,0 +1,7 @@
+DeleteBlockStorage-f35-manager-2:
+    type: BlockStorage
+    action: DeleteBlockStorage
+    args:
+        name: f35-manager-2
+    depends_on: []
+    ignore_error: false

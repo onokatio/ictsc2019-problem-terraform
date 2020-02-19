@@ -1,0 +1,15 @@
+GenerateBlockStorage-f35-manager-3:
+    type: Image
+    action: GenerateBlockStorage
+    args:
+        image_name: problem-7-f35-manager-3
+        tag: latest
+        block_storage_name: f35-manager-3
+        annotations:
+            n0core/provisioning/block_storage/request_node_name: ictsc-sl2500-1-1
+        labels: {}
+        request_bytes: 1073741824
+        limit_bytes: 10737418240
+        source_url: ""
+    depends_on: []
+    ignore_error: false
