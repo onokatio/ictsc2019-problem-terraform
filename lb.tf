@@ -5,8 +5,8 @@ resource "n0stack_blockstorage" "blockstorage-lb" {
 	annotations = {
 		"n0core/provisioning/block_storage/request_node_name" = "ictsc-sl2500-1-1"
 	}
-	request_bytes = 1073741824
-	limit_bytes = 10737418240
+	request_bytes = 2147483648
+	limit_bytes = 21474836480
 }
 
 resource "n0stack_virtualmachine" "vitualmachine-lb" {
