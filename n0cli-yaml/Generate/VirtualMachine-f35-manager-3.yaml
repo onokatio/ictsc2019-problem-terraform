@@ -18,5 +18,7 @@ GenerateVirtualMachine-f35-manager-3:
           - network_name: f35
             ipv4_address: 192.168.7.3
             ipv6_address: ""
-    depends_on: []
+    depends_on:
+      - ApplyNetwork-f35
+      - GenerateBlockStorage-f35-manager-3
     ignore_error: false
