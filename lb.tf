@@ -14,10 +14,10 @@ resource "n0stack_virtualmachine" "vitualmachine-lb" {
         annotations = {
                 "n0core/provisioning/virtual_machine/request_node_name" = "ictsc-sl2500-1-1"
         }
-        request_cpu_milli_core = 3000
-        limit_cpu_milli_core = 3000
-        request_memory_bytes = 4294967296
-        limit_memory_bytes = 4294967296
+        request_cpu_milli_core = 1000
+        limit_cpu_milli_core = 1000
+        request_memory_bytes = 1073741824
+        limit_memory_bytes = 1073741824
         block_storage_names = ["f35-lb"]
 
         nics {
