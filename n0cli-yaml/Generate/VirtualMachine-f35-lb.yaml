@@ -9,10 +9,10 @@ GenerateVirtualMachine-f35-lb:
         labels: {}
         block_storage_names:
           - f35-lb
-        request_cpu_milli_core: 3000
-        limit_cpu_milli_core: 3000
-        request_memory_bytes: 4294967296
-        limit_memory_bytes: 4294967296
+        request_cpu_milli_core: 1000
+        limit_cpu_milli_core: 1000
+        request_memory_bytes: 1073741824
+        limit_memory_bytes: 1073741824
         ssh_authorized_keys: []
         nics:
           - network_name: f35
