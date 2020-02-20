@@ -1,6 +1,6 @@
 resource "n0stack_blockstorage" "blockstorage-lb" {
 	image_name = "problem-7-f35-lb"
-	tag = "latest"
+	tag = "1"
 	blockstorage_name = "f35-lb"
 	annotations = {
 		"n0core/provisioning/block_storage/request_node_name" = "ictsc-sl2500-1-1"

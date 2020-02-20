@@ -3,7 +3,7 @@ GenerateBlockStorage-f35-worker-1:
     action: GenerateBlockStorage
     args:
         image_name: problem-7-f35-worker-1
-        tag: latest
+        tag: "1"
         block_storage_name: f35-worker-1
         annotations:
             n0core/provisioning/block_storage/request_node_name: ictsc-sl2500-1-1
