@@ -47,7 +47,7 @@ resource "n0stack_blockstorage" "blockstorage" {
 	count = length(var.machines)
 
 	image_name = "problem-7-${var.machines[count.index].vm_name}"
-	tag = "1"
+	tag = "2"
 	blockstorage_name = var.machines[count.index].vm_name
 	annotations = {
 		"n0core/provisioning/block_storage/request_node_name" = "ictsc-sl2500-1-1"

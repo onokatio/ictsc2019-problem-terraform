@@ -3,7 +3,7 @@ GenerateBlockStorage-f35-manager-2:
     action: GenerateBlockStorage
     args:
         image_name: problem-7-f35-manager-2
-        tag: "1"
+        tag: "2"
         block_storage_name: f35-manager-2
         annotations:
             n0core/provisioning/block_storage/request_node_name: ictsc-sl2500-1-1
