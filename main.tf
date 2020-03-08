@@ -1,5 +1,5 @@
 provider "n0stack" {
-	endpoint = "172.16.1.11:20180"
+	endpoint = "127.0.0.1:20180"
 }
 
 resource "n0stack_network" "f35" {
